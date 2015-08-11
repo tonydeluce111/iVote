@@ -2,20 +2,11 @@ package us.deluce.ivote;
 
 import java.util.List;
 
-/************************************************************
- * 
- * Implements abstract Question class for MultipleChoiceQuestions 
- * @version 1.0
- * @author Tony DeLuce
- *
- *************************************************************/
-
-
 public class SingleChoiceQuestion extends Question {
 	
-public SingleChoiceQuestion(String text, List<String> selections, List<String> answers) {
+public SingleChoiceQuestion(String text, List<String> selections, String answer) {
 		
-		super(text, selections, answers);
+		super(text, selections, answer);
 	}
 	
 	public String checkAnswer(String votersAnswer) { 

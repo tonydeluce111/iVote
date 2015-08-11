@@ -4,9 +4,9 @@ import java.util.List;
 
 public class MultipleChoiceQuestion extends Question {
 	
-	public MultipleChoiceQuestion(String text, List<String> selections, List<String> answers) {
+	public MultipleChoiceQuestion(String text, List<String> selections, String answer) {
 		
-		super(text, selections, answers);
+		super(text, selections, answer);
 	}
 	
 	public String checkAnswer(String votersAnswer) { 
