@@ -1,12 +1,14 @@
 package us.deluce.ivote;
 
+import java.util.List;
+
 public class Student {
 	
-	/* following static variable to keep track of total number of voters */
+	// following static variable to keep track of total number of student voters
 	private static int numberStudents = 0;
 	
 	private String studentId;
-	private String studentSelection;
+	private List<String> studentSelections;
 	
 	
 	public Student(String studentId) {
@@ -14,20 +16,26 @@ public class Student {
 		numberStudents++;
 	}
 	
-	public int getNumberStudents() {
+	public static void resetNumberStudents() {
+		numberStudents = 0;
+	}
+	
+	public static int getNumberStudents() {
 		return numberStudents;
 	}
+	
 	
 	public String getStudentId() {
 		return this.studentId;
 	}
 	
-	public void recordStudentSelection(String selection) {
-		this.studentSelection = selection;		
+	public void recordStudentSelections(List<String> selections) {
+		this.studentSelections = selections;		
+	}
+	
+	public List<String> getStudentSelections() {
+		return studentSelections;
 	}
 		
-	public String getStudentSelection() {
-		return studentSelection;	
-	}
 
 }

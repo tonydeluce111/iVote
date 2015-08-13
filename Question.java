@@ -6,21 +6,30 @@ public abstract class Question {
 	
 	protected String questionText;
 	protected List<String> questionSelections;
-	protected String correctAnswer;
+	protected List<String> correctAnswers;
 	
-	public Question(String text, List<String> selections, String answer) {
+	public Question(String text, List<String> selections, List<String> answers) {
 		this.questionText = text;
 		this.questionSelections = selections;
-		this.correctAnswer = answer;
+		this.correctAnswers = answers;
 	}
 	
-	public String getQuestion() {
+	public String getQuestionText() {
 		return this.questionText;
 	}
 
-	public List<String> getSelections() {
+	public List<String> getQuestionSelections() {
 		return this.questionSelections;
 	}
 	
-	public abstract String checkAnswer(String votersAnswer);
+	public List<String> getCorrectAnswers() {
+		return this.getCorrectAnswers();
+	}
+	
+	public boolean inQuestionSelections(String submission) {
+	return this.questionSelections.contains(submission);
+	}
+	
+	public abstract boolean checkAnswer(List<String> votersAnswers);
+	
 }
