@@ -71,7 +71,7 @@ public class SimulationDriver {
 		myStudents[1].recordStudentSelections(studentAnswers);
 		myVoteService1.submit(myStudents[1].getStudentId(), myStudents[1].getStudentSelections());
 		
-		// Print out the status from multiChoiceQuestion round
+		// Print out the statss from multiChoiceQuestion round
 		myVoteService1.printStats();	
 		
 	
@@ -109,7 +109,7 @@ public class SimulationDriver {
 				studentAnswers.remove(singleChoiceInputs.get(M));				
 		}
 		
-		// Print out the status from singleChoiceQuestion round
+		// Print out the stats from singleChoiceQuestion round
 		myVoteService2.printStats();	
 	
 	}
