@@ -19,6 +19,11 @@ public class IVoteService implements Statistical {
          this.submissions = new Hashtable<String, List<String>>(); 
          this.numberCorrect = 0; 
     } 
+   
+   // private method used by public printstats method below
+   private Integer totalSubmissions() { 
+       return this.submissions.size(); 
+   } 
 
    // submits each student submission by studentID into Hashtable 
    public boolean submit(String studentId, List<String> sub) { 
@@ -33,12 +38,7 @@ public class IVoteService implements Statistical {
          } 
         this.submissions.put(studentId, validSubmission); 
         return true; 
-     } 
-   
-   // returns total number of submissions ( Statistical interface )
-   public Integer totalSubmissions() { 
-       return this.submissions.size(); 
-   } 
+     }
  
  
    // Print out statistics for this iVote instance ( Statistical interface )
